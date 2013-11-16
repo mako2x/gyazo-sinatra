@@ -1,15 +1,9 @@
-require 'rubygems'
-require 'sinatra'
-require 'rack'
-require 'digest/md5'
-require 'sdbm'
-
 module Gyazo
   class Controller < Sinatra::Base
 
     configure do
       set :dbm_path, 'db/id'
-      set :image_dir, 'public/images'
+      set :image_dir, 'public'
       set :image_url, 'http://gyazo.send.sh/images'
     end
 
